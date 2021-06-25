@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import user from '../images/user.png';
 
 const ContactDetails = (props) => {
-    console.log(props);
+    const { name, email } = props.location.state.contact;
     return (
         <div className="main">
             <div className="ui card centered">
@@ -10,8 +10,8 @@ const ContactDetails = (props) => {
                     <img src={user} alt="user" />
                 </div>
                 <div className="content">
-                    <div className="header">Musaka</div>
-                    <div className="description">mazna</div>
+                    <div className="header">{name}</div>
+                    <div className="description">{email}</div>
                 </div>
             </div>
         </div>
