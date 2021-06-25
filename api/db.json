@@ -1,29 +1,19 @@
 {
-    "contacts": [
-        {
-            "id": "407bf3e1-d6c3-434e-ac78-6affd83601ea",
-            "name": "bla",
-            "email": "blabla@abv.bg"
-        },
-        {
-            "id": "f93c4bed-4230-4688-a0b8-69cb12dcff32",
-            "name": "sa",
-            "email": "sasa@abv.bg"
-        },
-        {
-            "id": "51c5eb1f-050b-4665-b93d-6f88e7d0f2f3",
-            "name": "blqblq",
-            "email": "wawa@gmail.com"
-        },
-        {
-            "id": "418d55a7-715d-4c65-8ebc-c523a472dfba",
-            "name": "ssss",
-            "email": "ssss@abv.bg"
-        },
-        {
-            "id": "22ee7c59-9e64-4d64-b866-29f19fdfbbd8",
-            "name": "shopska",
-            "email": "shopska@abv.bg"
-        }
-    ]
+  "contacts": [
+    {
+      "id": "22ee7c59-9e64-4d64-b866-29f19fdfbbd8",
+      "name": "blqblq",
+      "email": "wowo@abv.bg"
+    },
+    {
+      "id": "59b56901-e1ba-462c-92a7-062240953a3c",
+      "name": "hohoho",
+      "email": "hoho@abv.bg"
+    },
+    {
+      "id": "5b99e829-72d7-411e-89a0-a12474dd59a6",
+      "name": "sssSSssss",
+      "email": "SSss@Abv.bg"
+    }
+  ]
 }
