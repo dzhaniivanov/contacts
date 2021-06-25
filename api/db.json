@@ -1,11 +1,6 @@
 {
   "contacts": [
     {
-      "id": "22ee7c59-9e64-4d64-b866-29f19fdfbbd8",
-      "name": "blqblq",
-      "email": "wowo@abv.bg"
-    },
-    {
       "id": "59b56901-e1ba-462c-92a7-062240953a3c",
       "name": "hohoho",
       "email": "hoho@abv.bg"
@@ -14,6 +9,11 @@
       "id": "5b99e829-72d7-411e-89a0-a12474dd59a6",
       "name": "sssSSssss",
       "email": "SSss@Abv.bg"
+    },
+    {
+      "id": "f47c143f-073e-4f2e-8d9f-f450420766d4",
+      "name": "ebahti",
+      "email": "glupost@abv.bg"
     }
   ]
 }

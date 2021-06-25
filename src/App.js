@@ -13,8 +13,10 @@ import EditContact from "./components/EditContact";
 
 
 function App() {
-  const LOCAL_STORAGE_KEY = "contacts";
+  //const LOCAL_STORAGE_KEY = "contacts";
   const [contacts, setContacts] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
 
 
   const retrieveContacts = async () => {
@@ -47,7 +49,22 @@ function App() {
     setContacts(contacts.map(contact => {
       return contact.id === id ? { ...response.data } : contact;
     }))
-  }
+  };
+
+  const searchHandler = (searchTerm) => {
+    setSearchTerm(searchTerm);
+    if (searchTerm !== "") {
+      const newContactList = contacts.filter((contact) => {
+        return Object.values(contact)
+          .join(" ")
+          .toLowerCase()
+          .includes(searchTerm.toLowerCase());
+      });
+      setSearchResults(newContactList);
+    } else {
+      setSearchResults(contacts);
+    }
+  };
 
   useEffect(() => {
     /*  const retriveContacts = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
@@ -71,11 +88,14 @@ function App() {
         <Switch>
           <Route path="/"
             exact
-            render={(props) => (<ContactList
-              {...props}
-              contacts={contacts}
-              getContactId={removeContactHandler}
-            />
+            render={(props) => (
+              <ContactList
+                {...props}
+                contacts={searchTerm.length < 1 ? contacts : searchResults}
+                getContactId={removeContactHandler}
+                term={searchTerm}
+                searchKeyword={searchHandler}
+              />
             )}
           />
           <Route path="/add"
