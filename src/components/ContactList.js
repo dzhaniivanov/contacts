@@ -43,7 +43,7 @@ const ContactList = (props) => {
                 </div>
             </div>
             <div className="ui ceiled list">
-                {renderContactList}
+                {renderContactList.length > 0 ? renderContactList : "No Contacts available"}
             </div>
         </>
     )
