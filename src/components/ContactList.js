@@ -9,44 +9,26 @@ const ContactList = (props) => {
     };
 
 
-    const contacts = [
-        {
-            id: "1",
-            name: "bla",
-            email: 'bla@abv.bg',
-        },
-        {
-            id: "1",
-            name: "bla",
-            email: 'bla@abv.bg',
-        },
-        {
-            id: "1",
-            name: "bla",
-            email: 'bla@abv.bg',
-        },
-    ]
-    const renderContactList = contacts.map((contact) => {
+    const renderContactList = props.contacts.map((contact) => {
         return (
             <ContactCard contact={contact} clickHandler={deleteContactHandler} key={contact.id} />
         )
     })
 
 
-
     return (
-        <div className="main">
-            <h2>
+        <>
+            <h2 style={{ paddingTop: "40px", }}>
                 Contact List
-                <button className="ui button blue right">Add Contact</button>
+                <Link to="/add">
+                    <button className="ui button blue right" style={{ marginLeft: "5px" }}>Add Contact</button>
+                </Link>
             </h2>
             <div className="ui ceiled list">
                 {renderContactList}
             </div>
-
-        </div>
+        </>
     )
-
 };
 
 
